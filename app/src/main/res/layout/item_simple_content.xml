@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="8dp"
+    android:clickable="false">
+
+
+    <!--<TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        tools:text="name"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        />-->
+
+    <!--<Button
+        android:id="@+id/btGood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Good"
+        android:layout_centerVertical="true"
+        />-->
+
+    <!--<TextView
+        android:id="@+id/tvSwipeEnable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:textSize="16sp"
+        android:textColor="#e77777"
+        tools:text="timer"
+        android:layout_centerVertical="true"
+       android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />-->
+    <TextView
+        android:id="@+id/txtExpand"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="6dp"
+        android:foreground="?selectableItemBackground"
+        android:padding="12dp" />
+
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:layout_below="@id/txtExpand"
+        android:id="@+id/expandable_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_item_background"
+        app:el_duration="300"
+        app:el_expanded="false">
+
+        <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Content"
+            android:textColor="#fff" />-->
+        <LinearLayout
+            android:id="@+id/controlsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6">
+            <Button
+                android:id="@+id/btnControl1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/add"
+                android:text="1"
+                android:textColor="@color/red"/>
+            <Button
+                android:id="@+id/btnControl2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/done_all"
+                android:text="2"/>
+            <Button
+                android:id="@+id/btnControl3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="#"/>
+            <Button
+                android:id="@+id/btnControl4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/put_time"
+                android:text="4"/>
+            <Button
+                android:id="@+id/btnControl5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/add_icon"
+                android:text="5"/>
+            <Button
+                android:id="@+id/btnControl6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="*"/>
+
+        </LinearLayout>
+
+    </net.cachapa.expandablelayout.ExpandableLayout>
+</RelativeLayout>
